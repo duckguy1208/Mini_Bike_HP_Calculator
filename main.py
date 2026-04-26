@@ -1,1 +1,0 @@
-print("E6B Flight Computer")
