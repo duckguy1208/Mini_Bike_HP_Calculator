@@ -14,7 +14,7 @@ ratio = r_ratio / f_ratio
 #calculate the circumference of the tire
 circumference = 3.1416 * tire_size
 #calculate the speed in mph
-speed = (circumference * ratio * 60) / (ratio * 63360)
+speed = (rpm * circumference * 60) / (ratio * 63360)
 
 st.divider()
 st.write("Calculated Top Speed", f"{speed:.1f} MPH")
