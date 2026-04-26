@@ -37,7 +37,7 @@ def rpm_calculator():
     rpm = (speed * ratio * 63360) / (circumference * 60)
 
     st.divider()
-    st.metric("Engine RPM At Given Speed", f"{round(rpm, 1)} RPM")
+    st.metric("Engine RPM At Given Speed", f"{round(rpm, 0)} RPM")
 
 def gear_ratio_calculator():
 
