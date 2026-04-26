@@ -3,6 +3,12 @@ import math
 
 st.title("Mini Bike Speed Calculator")
 
+col1, col2 = st.columns(2)
+with col1:
+    num1 = st.number_input("Input A")
+with col2:
+    num2 = st.number_input("Input B")
+
 # Inputs
 f_ratio = st.number_input("Front Sprocket Teeth (Teeth)", value=12)
 r_ratio = st.number_input("Rear Sprocket Teeth (Teeth)", value=75)
