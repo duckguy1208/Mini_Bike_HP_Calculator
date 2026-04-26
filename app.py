@@ -17,8 +17,7 @@ def main():
     speed = (circumference * ratio * 60) / (ratio * 63360)
 
     st.divider()
-    col1, col2 = st.columns(2)
-    col1.metric("Speed (MPH)", f"{round(speed, 1)}")
-    
+    st.metric("Calculated Top Speed", f"{round(speed, 1)} MPH")
+    st.write(f"Your total gear ratio is **{round(ratio, 2)}:1**")
 
 main()
