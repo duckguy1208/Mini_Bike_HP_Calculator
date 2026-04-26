@@ -1,7 +1,29 @@
 import streamlit as st
 
 def main():
-    st.title("Hello, Streamlit!")
-    st.write("This is a simple Streamlit app.")
+    st.title("⚙️ Speed-to-HP Analyzer")
+
+    # Inputs
+    mph = st.number_input("Top Speed Reached (MPH)", value=40)
+    ratio = st.number_input("Total Gear Ratio (e.g., 5.4)", value=5.0)
+    tire_size = st.number_input("Tire Diameter (Inches)", value=14.5) # Standard mini bike tire
+
+    # 1. Calculate RPM
+    rpm = (mph * ratio * 336) / tire_size
+
+    # 2. Estimate HP based on Drag
+    # (Note: This is a simplified estimate for small bikes)
+    estimated_hp = (mph / 19)**3 
+
+    st.divider()
+    col1, col2 = st.columns(2)
+    col1.metric("Engine RPM", f"{int(rpm)}")
+    col2.metric("Estimated HP", f"{round(estimated_hp, 1)} hp")
+
+    # Gearhead Logic
+    if rpm > 5500:
+        st.warning("⚠️ You're screaming! You might need a smaller rear sprocket.")
+    elif rpm < 3500:
+        st.info("🛠️ You've got room to gear it down for more torque!")
 
 main()
