@@ -1,7 +1,7 @@
 import streamlit as st
 import math
 
-st.title("Speed Calculator for Mini Bikes")
+st.title("Mini Bike Speed Calculator")
 
 # Inputs
 f_ratio = st.number_input("Front Sprocket Teeth (Teeth)", value=12)
