@@ -17,6 +17,6 @@ circumference = 3.1416 * tire_size
 speed = (circumference * ratio * 60) / (ratio * 63360)
 
 st.divider()
-st.metric("Calculated Top Speed", f"{round(speed, 1)} MPH")
-st.write(f"Your total gear ratio is **{round(ratio, 2)}:1**")
+st.write("Calculated Top Speed", f"(round{speed, 0.1}) MPH")
+
 
