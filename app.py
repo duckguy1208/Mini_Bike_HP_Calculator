@@ -17,6 +17,6 @@ circumference = 3.1416 * tire_size
 speed = (circumference * ratio * 60) / (ratio * 63360)
 
 st.divider()
-st.write("Calculated Top Speed", f"(round{speed, 0.1}) MPH")
+st.write("Calculated Top Speed", f"{speed:.1f} MPH")
 
 
