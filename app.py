@@ -5,7 +5,9 @@ def main():
 
     # Inputs
     mph = st.number_input("Top Speed Reached (MPH)", value=40)
-    ratio = st.number_input("Total Gear Ratio (e.g., 5.4)", value=5.0)
+    f_ratio = st.number_input("Front Sprocket Teeth", value=15)
+    r_ratio = st.number_input("Rear Sprocket Teeth", value=40)
+    ratio = r_ratio / f_ratio
     tire_size = st.number_input("Tire Diameter (Inches)", value=14.5) # Standard mini bike tire
 
     # 1. Calculate RPM
